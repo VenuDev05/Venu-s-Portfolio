@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venu.K - Frontend Developer Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor">
+        <div class="cursor-dot"></div>
+        <div class="cursor-outline"></div>
+        <div class="cursor-text"></div>
+    </div>
+
+    <!-- Loading Screen -->
+    <div class="loader-wrapper">
+        <div class="loader">
+            <div class="code-animation">
+                <span class="code-line">&lt;html&gt;</span>
+                <span class="code-line">&nbsp;&nbsp;&lt;body&gt;</span>
+                <span class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;Venu.K&lt;/h1&gt;</span>
+                <span class="code-line">&nbsp;&nbsp;&lt;/body&gt;</span>
+                <span class="code-line">&lt;/html&gt;</span>
+            </div>
+            <div class="loading-text">Loading Portfolio...</div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">&lt;Venu.K/&gt;</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#home" class="nav-link" data-cursor="link">Home</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link" data-cursor="link">About</a></li>
+                <li class="nav-item"><a href="#skills" class="nav-link" data-cursor="link">Skills</a></li>
+                <li class="nav-item"><a href="#projects" class="nav-link" data-cursor="link">Projects</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link" data-cursor="link">Contact</a></li>
+            </ul>
+            <div class="hamburger" data-cursor="pointer">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-background">
+            <div class="code-rain">
+                <div class="code-column"></div>
+                <div class="code-column"></div>
+                <div class="code-column"></div>
+                <div class="code-column"></div>
+                <div class="code-column"></div>
+            </div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <div class="greeting">
+                    <span class="wave">👋</span>
+                    <span>Hello, I'm</span>
+                </div>
+                <h1 class="hero-title">
+                    <span class="name-highlight">Venu.K</span>
+                </h1>
+                <div class="typing-container">
+                    <span class="typing-text">Aspiring Frontend Developer</span>
+                    <span class="cursor-blink">|</span>
+                </div>
+                <p class="hero-subtitle">
+                    Passionate Information Technology student crafting beautiful and functional web experiences.
+                    Currently learning modern web technologies and building amazing projects.
+                </p>
+                <div class="hero-buttons">
+                    <a href="projects/venu resume.pdf" class="btn btn-primary" data-cursor="pointer" download>
+                        <i class="fas fa-download">Download CV</i>
+                    </a>
+                    <a href="#projects" class="btn btn-secondary" data-cursor="pointer">
+                        <i class="fas fa-eye"></i> View Projects
+                    </a>
+                </div>
+
+                <div class="social-links">
+                    <a href="https://github.com/GSVofficial" class="social-link" data-cursor="social"
+                        data-text="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/venu03?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                        class="social-link" data-cursor="social" data-text="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://www.instagram.com/venu_developer" class="social-link" data-cursor="social"
+                        data-text="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://wa.me/916381567863" class="social-link" data-cursor="social" data-text="Whatsapp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="profile-card" data-cursor="view">
+                    <div class="card-header">
+                        <div class="window-controls">
+                            <span class="control close"></span>
+                            <span class="control minimize"></span>
+                            <span class="control maximize"></span>
+                        </div>
+                        <span class="file-name">venu-profile.js</span>
+                    </div>
+                    <div class="card-content">
+                        <div class="code-block">
+                            <span class="code-line"><span class="keyword">const</span> <span
+                                    class="variable">developer</span> = {</span>
+                            <span class="code-line">&nbsp;&nbsp;<span class="property">name</span>: <span
+                                    class="string">"Venu.K"</span>,</span>
+                            <span class="code-line">&nbsp;&nbsp;<span class="property">role</span>: <span
+                                    class="string">"Frontend Developer"</span>,</span>
+                            <span class="code-line">&nbsp;&nbsp;<span class="property">status</span>: <span
+                                    class="string">"Student"</span>,</span>
+                            <span class="code-line">&nbsp;&nbsp;<span class="property">passion</span>: <span
+                                    class="string">"Web Development"</span>,</span>
+                            <span class="code-line">&nbsp;&nbsp;<span class="property">learning</span>: [<span
+                                    class="string">"React"</span>, <span class="string">"JavaScript"</span>],</span>
+                            <span class="code-line">};</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator" data-cursor="pointer">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+            <span>Scroll Down</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">About Me</span>
+                <h2 class="section-title">Get to Know Me</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <div class="about-intro">
+                        <h3>Hi there! I'm Venu.K 🚀</h3>
+                        <p>
+                            I'm a passionate Information Technology student with a deep love for frontend development.
+                            Currently pursuing my degree while diving deep into the world of web technologies.
+                            I believe in creating digital experiences that are not just functional, but also beautiful
+                            and user-friendly.
+                        </p>
+                        <p>
+                            When I'm not coding, you'll find me exploring new technologies, contributing to open-source
+                            projects,
+                            or learning about the latest trends in web development. My goal is to become a skilled
+                            frontend developer
+                            who can bring creative ideas to life through code.
+                        </p>
+                    </div>
+                    <div class="education">
+                        <h4><i class="fas fa-graduation-cap"></i> Education</h4>
+                        <div class="education-item">
+                            <h5>Bachelor of Information Technology</h5>
+                            <p>Currently pursuing • Expected 2026</p>
+                        </div>
+                    </div>
+                    <div class="interests">
+                        <h4><i class="fas fa-heart"></i> Interests</h4>
+                        <div class="interest-tags">
+                            <span class="tag" data-cursor="tag"
+                                onclick="speechSynthesis.speak(new SpeechSynthesisUtterance('I am a passionate about web development because I enjoy bringing ideas to life through interactive and visually engaging websites. I love creating user-friendly experiences that combine design with functionality'))">Web
+                                Development</span>
+                            <span class="tag" data-cursor="tag"
+                                onclick="speechSynthesis.speak(new SpeechSynthesisUtterance('I am a also deeply interested in UI/UX design, as it allows me to craft intuitive and visually appealing interfaces that enhance the overall user experience. I enjoy focusing on both aesthetics and usability to create seamless digital interactions.'))">UI/UX
+                                Design</span>
+                            <span class="tag" data-cursor="tag"
+                                onclick="speechSynthesis.speak(new SpeechSynthesisUtterance('I am a enthusiastic about open source because it promotes collaboration, learning, and community-driven innovation. Contributing to open source projects allows me to grow as a developer while giving back to the tech community.'))">Open
+                                Source</span>
+                            <span class="tag" data-cursor="tag"
+                                onclick="speechSynthesis.speak(new SpeechSynthesisUtterance('I enjoy problem solving because it challenges me to think critically and come up with efficient, creative solutions. It’s a key part of what makes coding exciting and rewarding for me.'))">Problem
+                                Solving</span>
+                            <span class="tag" data-cursor="tag"
+                                onclick="speechSynthesis.speak(new SpeechSynthesisUtterance('I am a passionate about continuous learning, especially in tech, because it keeps me curious and motivated. I love exploring new tools, frameworks, and concepts to improve my skills and stay updated in the ever-evolving world of development.'))">Learning</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-card" data-cursor="view">
+                        <div class="stat-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-number" data-target="10+">0</span>
+                            <span class="stat-label">Projects Completed</span>
+                        </div>
+                    </div>
+                    <div class="stat-card" data-cursor="view">
+                        <div class="stat-icon">
+                            <i class="fas fa-coffee"></i>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-number" data-target="500">0</span>
+                            <span class="stat-label">Cups of Coffee</span>
+                        </div>
+                    </div>
+                    <div class="stat-card" data-cursor="view">
+                        <div class="stat-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-number" data-target="1000">0</span>
+                            <span class="stat-label">Hours of Coding</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">My Skills</span>
+                <h2 class="section-title">Technologies I Work With</h2>
+            </div>
+            <div class="skills-content">
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3><i class="fas fa-laptop-code"></i> Frontend</h3>
+                        <div class="skill-items">
+                            <div class="skill-item" data-cursor="skill" data-text="HTML5">
+                                <div class="skill-icon">
+                                    <i class="fab fa-html5"></i>
+                                </div>
+                                <span>HTML5</span>
+                                <div class="skill-level" data-level="90"></div>
+                            </div>
+                            <div class="skill-item" data-cursor="skill" data-text="CSS3">
+                                <div class="skill-icon">
+                                    <i class="fab fa-css3-alt"></i>
+                                </div>
+                                <span>CSS3</span>
+                                <div class="skill-level" data-level="85"></div>
+                            </div>
+                            <div class="skill-item" data-cursor="skill" data-text="JavaScript">
+                                <div class="skill-icon">
+                                    <i class="fab fa-js-square"></i>
+                                </div>
+                                <span>JavaScript</span>
+                                <div class="skill-level" data-level="75"></div>
+                            </div>
+                            <div class="skill-item" data-cursor="skill" data-text="React">
+                                <div class="skill-icon">
+                                    <i class="fab fa-react"></i>
+                                </div>
+                                <span>React</span>
+                                <div class="skill-level" data-level="70"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3><i class="fas fa-tools"></i> Tools & Others</h3>
+                        <div class="skill-items">
+                            <div class="skill-item" data-cursor="skill" data-text="Git">
+                                <div class="skill-icon">
+                                    <i class="fab fa-git-alt"></i>
+                                </div>
+                                <span>Git</span>
+                                <div class="skill-level" data-level="80"></div>
+                            </div>
+                            <div class="skill-item" data-cursor="skill" data-text="Figma">
+                                <div class="skill-icon">
+                                    <i class="fab fa-figma"></i>
+                                </div>
+                                <span>Figma</span>
+                                <div class="skill-level" data-level="65"></div>
+                            </div>
+                            <div class="skill-item" data-cursor="skill" data-text="VS Code">
+                                <div class="skill-icon">
+                                    <i class="fas fa-code"></i>
+                                </div>
+                                <span>VS Code</span>
+                                <div class="skill-level" data-level="95"></div>
+                            </div>
+                            <div class="skill-item" data-cursor="skill" data-text="Bootstrap">
+                                <div class="skill-icon">
+                                    <i class="fab fa-bootstrap"></i>
+                                </div>
+                                <span>Bootstrap</span>
+                                <div class="skill-level" data-level="45"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="learning-section">
+                    <h3><i class="fas fa-book-open"></i> Currently Learning</h3>
+                    <div class="learning-items">
+                        <span class="learning-tag" data-cursor="learning">TypeScript</span>
+                        <span class="learning-tag" data-cursor="learning">Node.js</span>
+                        <span class="learning-tag" data-cursor="learning">MongoDB</span>
+                        <span class="learning-tag" data-cursor="learning">GSAP</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">My Work</span>
+                <h2 class="section-title">Featured Projects</h2>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card" data-cursor="project">
+                    <div class="project-image">
+                        <img src="img/e-commerce.png">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="projects/e-commerce.html" class="project-link" data-cursor="link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="https://github.com/GSVofficial/E-Commerce.git" class="project-link"
+                                    data-cursor="link">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>E-Commerce Website</h3>
+                        <p>A responsive e-commerce platform built with HTML, CSS, and JavaScript featuring product
+                            catalog and shopping cart.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-cursor="project">
+                    <div class="project-image">
+                        <img src="img/frontend book.png">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="projects/index1.html" class="project-link" data-cursor="link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="https://github.com/GSVofficial/E-BOOK.git" class="project-link"
+                                    data-cursor="link">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Book store</h3>
+                        <p>A beautiful online book</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">CSS3</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-cursor="project">
+                    <div class="project-image">
+                        <img src="img/todo.png">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="projects/to do.html" class="project-link" data-cursor="link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="https://github.com/GSVofficial/To-Do-list.git" class="project-link"
+                                    data-cursor="link">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>To-Do List</h3>
+                        <p>A List that will be created by the user to remember some of tasks are completed or
+                            in-completed.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-cursor="project">
+                    <div class="project-image">
+                        <img src="img/chat.png">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="projects/chat.html" class="project-link" data-cursor="link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="https://github.com/GSVofficial/chat-application.git" class="project-link"
+                                    data-cursor="link">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Chat Application</h3>
+                        <p>The real time chat application with some of features such as create or join the group, chat with multiple users. <b>Here's just a static UI to view.</b></p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="projects-cta">
+                    <button class="btn btn-outline" data-cursor="pointer">
+                        <i class="fab fa-github"></i>
+                        <a style="text-decoration: none; color: rgb(55, 223, 55);"
+                            href="https://github.com/GSVofficial">View All Projects on GitHub</a>
+                    </button>
+                </div>
+            </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Get In Touch</span>
+                <h2 class="section-title">Let's Work Together</h2>
+                <p class="section-subtitle">
+                    I'm always open to discussing new opportunities, collaborations, or just having a chat about web
+                    development!
+                </p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item" data-cursor="contact">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p>venugsv9894@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item" data-cursor="contact">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Phone</h4>
+                            <p>+91 63815 67863</p>
+                        </div>
+                    </div>
+                    <div class="contact-item" data-cursor="contact">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Location</h4>
+                            <p>India</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form class="form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" class="form-input" placeholder="Your Name" required
+                                    data-cursor="input"
+                                    onclick="speechSynthesis.speak(new SpeechSynthesisUtterance('Please enter your full name'))">
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-input" placeholder="Your Email" required
+                                    data-cursor="input"
+                                    onclick="speechSynthesis.speak(new SpeechSynthesisUtterance('Please enter your Mail'))">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-input" placeholder="Subject" required data-cursor="input"
+                                onclick="speechSynthesis.speak(new SpeechSynthesisUtterance('Please enter the subject or title'))">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-input" rows="5" placeholder="Your Message" required
+                                data-cursor="input"
+                                onclick="speechSynthesis.speak(new SpeechSynthesisUtterance('Enter the Content that what we have to know'))"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" data-cursor="pointer">
+                            <i class="fas fa-paper-plane"></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; 2025 Venu.K. Crafted with <i class="fas fa-heart"></i> and lots of <i
+                            class="fas fa-coffee"></i></p>
+                    <p style="text-align: center;">Type My <b>Name</b> To See The Magic.</p>
+                </div>
+                <div class="footer-social">
+                    <a href="https://github.com/GSVofficial" class="social-link" data-cursor="social"
+                        data-text="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/venu03?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                        class="social-link" data-cursor="social" data-text="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

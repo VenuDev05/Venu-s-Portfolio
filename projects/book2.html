@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CSS Book</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #d4fc79, #96e6a1);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      overflow: auto;
+    }
+
+    .container {
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      padding: 30px;
+      width: 700px;
+      max-height: 95vh;
+      overflow-y: auto;
+    }
+
+    h1 {
+      margin-bottom: 15%;
+      text-align: center;
+      color: rgb(14, 247, 14);
+    }
+
+    h2 {
+      background-color: #fff;
+      padding: 15px;
+      border-radius: 12px;
+      color: rgb(21, 140, 21);
+      text-align: center;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: 0.2s ease-in-out;
+      margin-top: 30px;
+    }
+
+    h2:hover {
+      background-color: #e6ffe6;
+    }
+
+    ul {
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      margin-top: 20px;
+      transition: max-height 0.8s ease, opacity 0.8s ease;
+      list-style-type: none;
+      padding: 0;
+    }
+
+    ul.show {
+      max-height: 2000px;
+      opacity: 1;
+    }
+
+    li {
+      margin-bottom: 10px;
+      background-color: #f0fff0;
+      padding: 10px;
+      border-radius: 10px;
+    }
+
+    h3 {
+      margin-top: 20px;
+      color: #1f7a1f;
+    }
+
+    img {
+      width: 100%;
+      border-radius: 10px;
+      margin-top: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .extra-content {
+      display: none;
+      opacity: 0;
+      transition: opacity 0.8s ease;
+    }
+
+    .extra-content.show {
+      display: block;
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>CSS BOOK</h1>
+
+    <!-- CSS INTRODUCTION -->
+    <div class="css-topics">
+      <h2 id="css-intro">CSS INTRODUCTION</h2>
+      <ul id="intro-ul">
+        <li>CSS stands for Cascading Style Sheet.</li>
+        <li>CSS describes how HTML elements are to be displayed on screen, paper, or in other media.</li>
+        <li>CSS saves a lot of work. It can control the layout of multiple web pages all at once.</li>
+        <li>External stylesheets are stored in CSS files.</li>
+      </ul>
+      <div class="extra-content" id="intro-extra">
+        <h3>Example of CSS</h3>
+        <img src="image/css declaration.png" alt="CSS Declaration Example">
+      </div>
+    </div>
+
+    <!-- CSS SELECTORS -->
+    <div class="css-selectors">
+      <h2 id="css-selector">CSS SELECTORS</h2>
+      <ul id="selector-ul">
+        <li>CSS selectors are used to "find" (or select) the HTML elements you want to style.</li>
+        <li>Simple selectors (select elements based on name, id, class).</li>
+        <li>Combinator selectors (select elements based on a specific relationship between them).</li>
+        <li>Pseudo-class selectors (select elements based on a certain state).</li>
+        <li>Pseudo-elements selectors (select and style a part of an element).</li>
+        <li>Attribute selectors (select elements based on an attribute or attribute value).</li>
+      </ul>
+      <div class="extra-content" id="selector-extra">
+        <h3>Examples of Selectors</h3>
+        <h4><b>Selector using tag</b></h4>
+        <img src="image/tag selector.png" alt="Tag Selector Example">
+
+        <h4><b>Selector using ID</b></h4>
+        <img src="image/id selector.png" alt="ID Selector Example">
+
+        <h4><b>Selector using Class</b></h4>
+        <img src="image/class selector.png" alt="Class Selector Example">
+
+        <h4><b>Selector using Class-Element</b></h4>
+        <img src="image/class element selector.png" alt="Class Element Selector Example">
+      </div>
+    </div>
+
+    <!-- CSS BORDERS -->
+    <div class="css-border">
+      <h2 id="border-title">CSS BORDERS</h2>
+      <ul id="border-ul">
+        <li>Borders are used to create lines around HTML elements, giving them visual boundaries.</li>
+        <li>Borders can be styled using width, style, and color properties.</li>
+        <li><b>dotted</b> - Defines a dotted border</li>
+        <li><b>dashed</b> - Defines a dashed border</li>
+        <li><b>solid</b> - Defines a solid border</li>
+        <li><b>double</b> - Defines a double border</li>
+        <li><b>groove</b> - Creates a 3D grooved border</li>
+        <li><b>ridge</b> - Creates a 3D ridged border</li>
+        <li><b>inset</b> - Creates a 3D inset border</li>
+        <li><b>outset</b> - Creates a 3D outset border</li>
+        <li><b>none</b> - No border</li>
+        <li><b>hidden</b> - Hides the border</li>
+      </ul>
+      <div class="extra-content" id="border-extra">
+        <h3>Example for Borders</h3>
+        <img src="image/border example.png" alt="CSS Border Example">
+        <br><br>
+        <h3>Result</h3>
+        <img src="image/border output.png" alt="Border Output Example">
+      </div>
+    </div>
+    <div class="css-margin">
+      <h2 id="margin-title">CSS MARGINS</h2>
+      <ul id="margin-ul">
+        <li>The CSS margin properties are used to create space around elements, outside of any defined borders.</li>
+        <li>With CSS, you have full control over the margins. There are properties for setting the margin for each side of an element (top, right, bottom, and left).</li>
+        <h3>Margin Declaration Types</h3>
+        <li>margin-top</li>
+        <li>margin-bottom</li>
+        <li>margin-left</li>
+        <li>margin-right</li>
+      </ul>
+      <div class="extra-content" id="margin-extra">
+        <h3 id="margin-extra">Example for margins,</h3>
+        <br>
+        <img src="image/margin example.png">
+      </div>
+    </div>
+    <div class="css-">
+      <h2 id="padding-title">CSS PADDING</h2>
+      <ul id="padding-ul">
+        <li>The CSS padding properties are used to generate space around an element's content, inside of any defined borders.</li>
+        <li>With CSS, you have full control over the padding. There are properties for setting the padding for each side of an element (top, right, bottom, and left).</li>
+        <br>
+        <h3>Padding Declaration Types,</h3>
+        <li>padding-top</li>
+        <li>padding-bottom</li>
+        <li>padding-left</li>
+        <li>padding-right</li>
+      </ul>
+      <div class="extra-content" id="padding-extra">
+        <h3 id="padding-exp">Example for padding,</h3>
+        <br>
+        <img src="image/padding example.png">
+      </div>
+    </div>
+    <div class="css-display">
+      <h2 id="display-title">CSS DISPLAY PROPERTIES</h2>
+      <ul id="display-ul">
+        <li>The display property is used to specify how an element is shown on a web page.</li>
+        <li>Every HTML element has a default display value, depending on what type of element it is. The default display value for most elements is block or inline.</li>
+        <li>The display property is used to change the default display behavior of HTML elements.</li>
+        <br>
+        <h4>There are types of display properties</h4>
+        <li><b>block</b></li>
+        <li><b>inline</b></li>
+        <li><b>inline-block</b></li>
+        <li><b>flex</b></li>
+        <li><b>grid</b></li>
+      </ul>
+      <div class="extra-content" id="display-extra">
+        <h3>Example for block,</h3>
+        <img src="image/block example.png">
+        <li>Generally they are the default display.</li>
+        <br>
+        <h3>Example for inline</h3>
+        <img src="image/inline example.png">
+        <li>Element takes up only as much width as needed.</li>
+        <br>
+        <h3>Example for inline-block</h3>
+        <img src="image/inline-block example.png">
+        <li>Like inline, but you can set width and height.</li>
+        <br>
+        <h3>Example for flex</h3>
+        <img src="image/flex example.png">
+        <li>Turns the element into a <b>flex container</b>.</li>
+        <li>Enables layout control of child elements with Flexbox.</li>
+        <br>
+        <h3>Example for grid</h3>
+        <img src="image/grid example.png">
+        <li>Turns the element into a <b>grid container</b>.</li>
+        <li>Enables layout control using CSS Grid.</li>
+      </div>
+    </div>
+    <div class="css-animation">
+      <h2 id="animation-title">CSS ANIMATIONS</h2>
+      <ul id="animation-ul">
+        <li>CSS allows animation of HTML elements without using JavaScript!</li>
+        <li>CSS animations allow you to create smooth transitions between different styles on HTML elements without using JavaScript. With CSS, you can animate things like position, color, size, opacity, and more</li>
+        <li>You can change as many CSS properties you want, as many times as you want.</li>
+        <li>To use CSS animation, you must first specify some keyframes for the animation.</li>
+        <li>Keyframes hold what styles the element will have at certain times.</li>
+        <h3><b>Animation properties</b></h3>
+        <li>@keyframes</li>
+        <li>animation-name</li>
+        <li>animation-duration</li>
+        <li>animation-delay</li>
+        <li>animation-iteration-count</li>
+        <li>animation-direction</li>
+        <li>animation-timing-function</li>
+        <li>animation-fill-mode</li>
+        <li>animation</li>
+      </ul>
+      <div class="extra-content" id="animation-extra">
+        <h3>Example for animations</h3>
+        <br>
+        <img src="image/animation example.png">
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // INTRO section
+    const introHeader = document.querySelector('#css-intro');
+    const introUl = document.querySelector('#intro-ul');
+    const introExtra = document.querySelector('#intro-extra');
+
+    introHeader.addEventListener('click', () => {
+      introUl.classList.toggle('show');
+      introExtra.classList.toggle('show');
+    });
+
+    // SELECTOR section
+    const selectorHeader = document.querySelector('#css-selector');
+    const selectorUl = document.querySelector('#selector-ul');
+    const selectorExtra = document.querySelector('#selector-extra');
+
+    selectorHeader.addEventListener('click', () => {
+      selectorUl.classList.toggle('show');
+      selectorExtra.classList.toggle('show');
+    });
+
+    // BORDER section (fixed)
+    const borderHeader = document.querySelector('#border-title');
+    const borderUl = document.querySelector('#border-ul');
+    const borderExtra = document.querySelector('#border-extra');
+
+    borderHeader.addEventListener('click', () => {
+      borderUl.classList.toggle('show');
+      borderExtra.classList.toggle('show');
+    });
+
+    // MARGIN section
+    const marginHeader = document.querySelector('#margin-title')
+    const marginUl = document.querySelector('#margin-ul')
+    const marginExtra = document.querySelector('#margin-extra')
+
+    marginHeader.addEventListener('click', () => {
+      marginUl.classList.toggle('show');
+      marginExtra.classList.toggle('show');
+    });
+
+    // PADDING Section
+    const paddingHeader = document.querySelector('#padding-title')
+    const paddingUl = document.querySelector('#padding-ul')
+    const paddingExtra = document.querySelector('#padding-extra')
+
+    paddingHeader.addEventListener('click', () => {
+      paddingUl.classList.toggle('show');
+     paddingExtra.classList.toggle('show');
+    });
+
+    // DISPLAY Section
+    const displayHeader = document.querySelector('#display-title')
+    const displayUl = document.querySelector('#display-ul')
+    const displayExtra = document.querySelector('#display-extra')
+
+    displayHeader.addEventListener('click', () => {
+    displayUl.classList.toggle('show');
+    displayExtra.classList.toggle('show');
+    });
+
+    // ANIMATION Section
+    const animationHeader = document.querySelector('#animation-title')
+    const animationUl = document.querySelector('#animation-ul')
+    const animationExtra = document.querySelector('#animation-extra')
+
+    animationHeader.addEventListener('click', () => {
+    animationUl.classList.toggle('show');
+    animationExtra.classList.toggle('show');
+    });
+
+  </script>
+</body>
+</html>

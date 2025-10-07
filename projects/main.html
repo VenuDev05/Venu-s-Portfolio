@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Book</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="title-container">
+        <h1>Welcome To Our</h1>
+        <h2>Frontend Book</h2>
+    </div>
+
+    <div class="nav-container">
+        <nav>
+            <ul>
+                <li><a href="book1.html">HTML</a></li>
+                <li><a href="book2.html">CSS</a></li>
+                <li><a href="book3.html">JavaScript</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="search-container">
+        <input id="inp" type="text" placeholder="Search Your Course">
+        <button class="search-btn">Search</button>
+    </div>
+    <script>
+        const search = document.querySelector('.search-btn')
+        const inp = document.querySelector('#inp')
+        inp.addEventListener('mouseover', ()=>{
+            inp.classList.add('show')
+            search.style.marginLeft = "20px"
+        })
+        inp.addEventListener('mouseout', ()=>{
+            inp.classList.remove('show')
+            search.style.marginLeft = "0px"
+        })
+    </script>
+</body>
+</html>

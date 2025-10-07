@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.header {
+    padding: 15px;
+    text-align: center;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+    cursor: pointer;
+}
+@keyframes scrollLeft {
+from {
+transform: translateX(0);
+}
+to {
+transform: translateX(-50%);
+}
+}
+
+.scroll-container {
+overflow: hidden;
+white-space: nowrap;
+background: #f8f8f8;
+padding: 20px 0;
+position: relative;
+}
+
+.image-wrapper {
+display: flex;
+width: max-content;
+animation: scrollLeft 10s linear infinite;
+}
+
+
+/* Image styling */
+.image-box {
+position: relative;
+display: inline-block;
+}
+
+.image-box img {
+width: 200px;
+height: auto;
+border-radius: 10px;
+transition: transform 0.3s ease-in-out;
+}
+
+.image-box:hover img {
+transform: scale(1.1);
+}
+
+
+.image-text {
+position: absolute;
+bottom: 10px;
+left: 50%;
+transform: translateX(-50%);
+background: rgba(0, 0, 0, 0.7);
+color: white;
+padding: 5px 10px;
+border-radius: 5px;
+font-size: 14px;
+opacity: 0;
+transition: opacity 0.3s ease-in-out;
+}
+
+.image-box:hover .image-text {
+opacity: 1;
+}
+
+
+.item-container{
+    margin-top: 10%;
+}
+.suggested-items {
+display: grid;
+grid-template-columns: repeat(5, 1fr); /* 5 images per row */
+gap: 15px;
+justify-items: center; /* Centers images within grid */
+padding: 20px;
+}
+
+figure {
+text-align: center;
+margin: 0;
+}
+
+figure img {
+margin-top: 25%;
+width: 100px;  /* Smaller image */
+height: 100px;
+border-radius: 10px;
+transition: transform 0.3s;
+}
+
+figure img:hover {
+cursor: pointer;
+transform: scale(1.1);
+}
+
+figcaption {
+font-size: 14px;
+font-weight: bold;
+margin-top: 5px;
+}
+figcaption:hover{
+cursor: pointer;
+}
+.row1{
+font-size: larger;
+}
+.row2{
+font-size: smaller;
+}
+.row2:hover{
+color: palevioletred;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+.suggested-items {
+grid-template-columns: repeat(3, 1fr); /* 3 images per row for tablets */
+}
+}
+
+@media (max-width: 480px) {
+.suggested-items {
+grid-template-columns: repeat(2, 1fr); /* 2 images per row for mobile */
+}
+}
+a{
+color: black;
+text-decoration: none;
+}
+html{
+scroll-behavior: smooth;
+}
+button {
+transition: background-color 0.5s ease; /* Smooth transition */
+padding: 10px 20px;
+font-size: 16px;
+border: none;
+cursor: pointer;
+border-radius: 10px;
+}
+
+.show {
+background-color: aqua;
+animation: check 0.5s ease-in-out;
+}
+
+@keyframes check {
+0% {
+    transform: scale(1);
+}
+50% {
+    transform: scale(1.1);
+}
+100% {
+    transform: scale(1);
+}
+}
+.item-container h2{
+text-align: center;
+}
+.item-container h2{
+text-align: center;
+}
+.cart-container h1{
+text-align: center;
+}
+.search{
+margin-top: 5%;
+display: flex;
+margin-bottom: 2%;
+width: 50%;
+margin-left: 25%;
+}
+.search-input{
+border-color:blueviolet;
+height: 40px;
+width: 600px;
+border-radius: 25px;
+text-align: center;
+}
+.search-input:hover{
+animation: input 1.5s ease-in-out;
+}
+@keyframes input {
+0%{
+    transform: scale(1) ;
+}
+50%{
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px aqua;
+}
+100%{
+    transform: scale(1);
+}
+}
+
+.ul{
+    margin-top: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 2%;
+
+}
+
+.item-container{
+    padding: 20px;
+    background-color:white ;
+}
+.cart-container{
+    margin-bottom: 200px;
+    padding: 20px;
+    background-color:white ;
+}
+
+/* General Styles */
+.help-container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    color: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.help-container h1 {
+    color: black;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+/* Input Fields */
+.info1[type="text"] {
+    width: 90%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.info1[type="text"]:focus {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Button */
+#submit {
+    width: 50%;
+    margin-top: 3%;
+    padding: 12px;
+    background: white;
+    color: #6e8efb;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#submit:hover {
+    transform: scale(1.1);
+    color: white;
+    background-color: aqua;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .help-container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    input[type="text"],
+    #submit {
+        font-size: 14px;
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>E-Commerce</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#item">Items</a></li>
+                <li> <a href="#cart">Cart</a> </li>
+                <li> <a href="#help">Help</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="search">
+        <input type="text" class="search-input" placeholder="Search Your Product">
+    </div>
+    <div class="scroll-container" id="home">
+        <div class="image-wrapper">
+            <!-- First set of images -->
+            <div class="image-container">
+                <div class="image-box">
+                    <img src="shirt.jpg" alt="Shirt">
+                    <div class="image-text">Trending Shirts</div>
+                </div>
+                <div class="image-box">
+                    <img src="pant.jpg" alt="Pant">
+                    <div class="image-text">Best Pants</div>
+                </div>
+                <div class="image-box">
+                    <img src="shoe.jpg" alt="Shoe">
+                    <div class="image-text">New Shoes</div>
+                </div>
+                <div class="image-box">
+                    <img src="pods.jpg" alt="Pods">
+                    <div class="image-text">AirPods Pro</div>
+                </div>
+                <div class="image-box">
+                    <img src="mobile.jpg" alt="Mobile">
+                    <div class="image-text">Latest Smartphone</div>
+                </div>
+                <div class="image-box">
+                    <img src="laptop.jpg" alt="Laptop">
+                    <div class="image-text">Powerful Laptops</div>
+                </div>
+            </div>
+    
+            <!-- Duplicate set of images for infinite scrolling -->
+            <div class="image-container">
+                <div class="image-box">
+                    <img src="shirt.jpg" alt="Shirt">
+                    <div class="image-text">Trending Shirts</div>
+                </div>
+                <div class="image-box">
+                    <img src="pant.jpg" alt="Pant">
+                    <div class="image-text">Best Pants</div>
+                </div>
+                <div class="image-box">
+                    <img src="shoe.jpg" alt="Shoe">
+                    <div class="image-text">New Shoes</div>
+                </div>
+                <div class="image-box">
+                    <img src="pods.jpg" alt="Pods">
+                    <div class="image-text">AirPods Pro</div>
+                </div>
+                <div class="image-box">
+                    <img src="mobile.jpg" alt="Mobile">
+                    <div class="image-text">Latest Smartphone</div>
+                </div>
+                <div class="image-box">
+                    <img src="laptop.jpg" alt="Laptop">
+                    <div class="image-text">Powerful Laptops</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+    <div class="item-container" id="item">
+        <h2>Suggested For You</h2>
+        <div class="suggested-items">
+            <figure>
+                <img src="camera.jpg" alt="Camera">
+                <figcaption class="row1">Camera</figcaption>
+                <br>
+                <figcaption class="row2">2,499</figcaption>
+                <button id="btn" class="camera">Add to Cart</button>
+            </figure>
+            <figure>
+                <img src="cream.jpg" alt="Cream">
+                <figcaption  class="row1">Cream</figcaption>
+                <br>
+                <figcaption class="row2">489</figcaption>
+                <button id="btn" class="cream">Add to Cart</button>
+            </figure>
+            <figure>
+                <img src="gamepad.jpg" alt="Gamepad">
+                <figcaption class="row1">Gamepad</figcaption>
+                <br>
+                <figcaption class="row2">4,999</figcaption>
+                <button id="btn" class="gamepad">Add to Cart</button>
+            </figure>
+            <figure>
+                <img src="headphone.jpg" alt="Headphone">
+                <figcaption class="row1">Headphone</figcaption>
+                <br>
+                <figcaption class="row2">3,999</figcaption>
+                <button id="btn" class="headphone">Add to Cart</button>
+            </figure>
+            <figure>
+                <img src="speaker.jpg" alt="Speaker">
+                <figcaption class="row1">Speaker</figcaption>
+                <br>
+                <figcaption class="row2">1,199</figcaption>
+                <button id="btn" class="speaker">Add to Cart</button>
+            </figure>
+            <figure>
+                <img src="hometheatre.jpg" alt="Home Theatre">
+                <figcaption class="row1">Home Theatre</figcaption>
+                <br>
+                <figcaption class="row2">9,999</figcaption>
+                <button id="btn" class="hometheatre">Add to Cart</button>
+            </figure>
+            <figure>
+                <img src="powerbank.jpg" alt="Power Bank">
+                <figcaption class="row1">Power Bank</figcaption>
+                <br>
+                <figcaption class="row2">1,500</figcaption>
+                <button id="btn" class="powerbank">Add to Cart</button>
+            </figure>
+            <figure>
+                <img src="soap.jpg" alt="Soap">
+                <figcaption class="row1">Soap</figcaption>
+                <br>
+                <figcaption class="row2">249</figcaption>
+                <button id="btn" class="soap">Add to Cart</button>
+            </figure>
+            <figure>
+                <img src="wheel.jpg" alt="Wheel">
+                <figcaption class="row1">Wheel</figcaption>
+                <br>
+                <figcaption class="row2">5,100</figcaption>
+                <button id="btn" class="wheel">Add to Cart</button>
+            </figure>
+            <figure>
+                <img src="watch.jpg" alt="Watch">
+                <figcaption class="row1">Watch</figcaption>
+                <br>
+                <figcaption class="row2">3,999</figcaption>
+                <button id="btn" class="watch">Add to Cart</button>
+            </figure>
+        </div>
+    </div>
+   <div class="cart-container" id="cart">
+    <h1>Cart Items's</h1>
+    <ul class="ul">
+       
+    </ul>
+   </div> 
+   
+   <div class="help-container" id="help">
+    <h1>Contact Us</h1>
+    <div class="info1-container">
+        <input type="text" class="info1" placeholder="Enter Your Name">
+        <input type="text" class="info1" placeholder="Enter Your Mail">
+    </div>
+    <div class="info2-container">
+        <input type="text" class="info1" placeholder="Place your issues">
+    </div>
+    <button id="submit">Submit</button>
+   </div>
+   <script>
+    
+    var submit = document.querySelector('#submit')
+    var buttons = document.querySelectorAll('#btn');
+    var remove = document.querySelector('#remove')
+    var items = document.querySelector('#items')
+    var camera = document.querySelector('.camera')
+    var cream = document.querySelector('.cream')
+    var gamepad = document.querySelector('.gamepad')
+    var headphone = document.querySelector('.headphone')
+    var hometheatre = document.querySelector('.hometheatre')
+    var speaker = document.querySelector('.speaker')
+    var powerbank = document.querySelector('.powerbank')
+    var soap = document.querySelector('.soap')
+    var wheel = document.querySelector('.wheel')
+    var watch = document.querySelector('.watch')
+    var ul =  document.querySelector('.ul')
+    var cart = document.querySelector('.cart-container')
+
+buttons.forEach((btn) => {
+    btn.addEventListener('mouseover', () => {
+        btn.classList.add('show');
+    });
+
+    btn.addEventListener('mouseout', () => {
+        btn.classList.remove('show');
+    });
+});
+    ul.addEventListener('click',(event)=>{
+        if(event.target.tagName == 'BUTTON')
+        event.target.parentElement.remove()
+    })
+
+   camera.addEventListener('click', ()=>{
+     const list1 = document.createElement('li')
+     list1.innerHTML = "   <img src='camera.jpg' style='height: 50px; width: 40px; margin-top:5%; margin-left:1%; display:flex;'>" + "<p>Camera</p>" + "2,499"+ "<button style = 'margin-left:50px; background-color:red; '>Remove</button>"
+     ul.append(list1)
+     list1.style.marginLeft = "100px"
+     list1.style.marginTop = "80px"     
+   })
+   cream.addEventListener('click', ()=>{
+     const list1 = document.createElement('li')
+     list1.innerHTML = "   <img src='cream.jpg' style='height: 50px; width: 40px; margin-top:5%; margin-left:1%; display:flex;'>" + "<p>Cream</p>" + "489" + "<button style = 'margin-left:50px; background-color:red;'>Remove</button>"
+     ul.append(list1)
+     list1.style.marginLeft = "100px"
+     list1.style.marginTop = "80px"
+   })
+   gamepad.addEventListener('click', ()=>{
+     const list1 = document.createElement('li')
+     list1.innerHTML = "   <img src='gamepad.jpg' style='height: 50px; width: 40px; margin-top:5%; margin-left:1%; display:flex;'>" + "<p>Gamepad</p>" + "4,999" + "<button style = 'margin-left:50px; background-color:red;'>Remove</button>"
+     ul.append(list1)
+     list1.style.marginLeft = "100px"
+     list1.style.marginTop = "80px"
+   })
+   headphone.addEventListener('click', ()=>{
+     const list1 = document.createElement('li')
+     list1.innerHTML = "   <img src='headphone.jpg' style='height: 50px; width: 40px; margin-top:5%; margin-left:1%; display:flex;'>" + "<p>Headphone</p>" + "3,999" + "<button style = 'margin-left:50px; background-color:red;'>Remove</button>"
+     ul.append(list1)
+     list1.style.marginLeft = "100px"
+     list1.style.marginTop = "80px"
+   })
+   hometheatre.addEventListener('click', ()=>{
+     const list1 = document.createElement('li')
+     list1.innerHTML = "   <img src='hometheatre.jpg' style='height: 50px; width: 40px; margin-top:5%; margin-left:1%; display:flex;'>" + "<p>Hometheatre</p>" + "9,999" + "<button style = 'margin-left:50px; background-color:red;'>Remove</button>"
+     ul.append(list1)
+     list1.style.marginLeft = "100px"
+     list1.style.marginTop = "80px"
+   })
+   powerbank.addEventListener('click', ()=>{
+     const list1 = document.createElement('li')
+     list1.innerHTML = "   <img src='powerbank.jpg' style='height: 50px; width: 40px; margin-top:5%; margin-left:1%; display:flex;'>" + "<p>Powerbank</p>" + "1,500" + "<button style = 'margin-left:50px; background-color:red;'>Remove</button>"
+     ul.append(list1)
+     list1.style.marginLeft = "100px"
+     list1.style.marginTop = "80px"
+   })
+   soap.addEventListener('click', ()=>{
+     const list1 = document.createElement('li')
+     list1.innerHTML = "   <img src='soap.jpg' style='height: 50px; width: 40px; margin-top:5%; margin-left:1%; display:flex;'>" + "<p>Soap</p>" + "249" + "<button style = 'margin-left:50px; background-color:red;'>Remove</button>"
+     ul.append(list1)
+     list1.style.marginLeft = "100px"
+     list1.style.marginTop = "80px"
+   })
+   speaker.addEventListener('click', ()=>{
+     const list1 = document.createElement('li')
+     list1.innerHTML = "   <img src='speaker.jpg' style='height: 50px; width: 40px; margin-top:5%; margin-left:1%; display:flex;'>" + "<p>Speaker</p>" + "1,199" + "<button style = 'margin-left:50px; background-color:red;'>Remove</button>"
+     ul.append(list1)
+     list1.style.marginLeft = "100px"
+     list1.style.marginTop = "80px"
+   })
+   watch.addEventListener('click', ()=>{
+     const list1 = document.createElement('li')
+     list1.innerHTML = "   <img src='watch.jpg' style='height: 50px; width: 40px; margin-top:5%; margin-left:1%; display:flex;'>" + "<p>Watch</p>" + "3,999" + "<button style = 'margin-left:50px; background-color:red;'>Remove</button>"
+     ul.append(list1)
+     list1.style.marginLeft = "100px"
+     list1.style.marginTop = "80px"
+   })
+   wheel.addEventListener('click', ()=>{
+     const list1 = document.createElement('li')
+     list1.innerHTML = "   <img src='wheel.jpg' style='height: 50px; width: 40px; margin-top:5%; margin-left:1%; display:flex;'>" + "<p>Wheel</p>" + "5,100" + "<button style = 'margin-left:50px; background-color:red;'>Remove</button>"
+     ul.append(list1)
+     list1.style.marginLeft = "100px"
+     list1.style.marginTop = "80px"
+   })
+
+
+    
+   submit.addEventListener('click', () => {
+    alert("Your Issues has been Submitted")
+   })
+
+   </script>
+</body>
+</html>

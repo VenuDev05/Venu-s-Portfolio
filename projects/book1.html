@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HTML BOOK</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #f9f9f9, #e1f5e8);
+      color: #333;
+      padding: 2rem;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 3rem;
+      margin-bottom: 2rem;
+      color: #0a8a3c;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .topics, .element-topics {
+      background: white;
+      padding: 1rem 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 800px;
+      overflow: hidden;
+      max-height: 80px;
+      transition: max-height 1s ease, padding 0.5s ease;
+      cursor: pointer;
+    }
+
+    .topics.expanded,
+    .element-topics.expanded {
+      padding: 2rem;
+      max-height: 1400px;
+      cursor: default;
+    }
+
+    .topics h2,
+    .element-topics h2 {
+      color: #0bc657;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    ul, h3, img {
+      opacity: 0;
+      transition: opacity 1s ease;
+    }
+
+    ul.show, h3.show, img.show {
+      opacity: 1;
+    }
+
+    ul {
+      margin-left: 1.5rem;
+      margin-top: 1rem;
+    }
+
+    li {
+      margin-bottom: 0.8rem;
+      line-height: 1.6;
+    }
+
+    h3 {
+      margin-top: 1.5rem;
+      font-size: 1.5rem;
+      color: #444;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      margin-top: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      .topics h2,
+      .element-topics h2 {
+        font-size: 1.5rem;
+      }
+
+      h3 {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>HTML BOOK</h1>
+  <div class="container">
+    <!-- Introduction Section -->
+    <div class="topics" id="topics-box">
+      <h2 id="intro-title">Introduction</h2>
+      <ul id="intro-ul">
+        <li>HTML stands for Hyper Text Markup Language.</li>
+        <li>HTML is the standard markup language for creating Web pages.</li>
+        <li>HTML describes the structure of a Web page.</li>
+        <li>HTML consists of a series of elements.</li>
+        <li>HTML elements label pieces of content such as "this is a heading", "this is a paragraph", "this is a link", etc.</li>
+      </ul>
+      <h3 id="exp">Example</h3>
+      <img src="structure.png" alt="HTML Structure" id="structure">
+    </div>
+
+    <!-- HTML Elements Section -->
+    <div class="element-topics" id="element-topics">
+      <h2 id="element-title">HTML Elements</h2>
+      <ul id="element-ul">
+        <li>The HTML Elements is everything from a start tag to an end tag in a program.</li>
+        <li>An HTML element is a building block of a web page. It defines the structure and content of the page.</li>
+        <li>An element is made up of:</li>
+        <li>1. Opening tag</li>
+        <li>2. Content</li>
+        <li>3. Closing Tag</li>
+        <li>The basic tags such as h1,h2,h3,p,etc. They are called as the Element of the HTML.</li>
+      </ul>
+      <h3 id="element-exp">Example</h3>
+      <img src="structure.png" alt="HTML Element Example" id="element-img">
+    </div>
+
+   <!-- HTML Attribute Section -->
+    <div class="topics" id="attribute-topics">
+        <h2 id="attribute-title">HTML Attributes</h2>
+        <ul id="attribute-ul">
+           <li>All HTML elements can have <b>attributes.</b></li>
+           <li>HTML attributes provide <b>additional information</b> about HTML elements.</li>
+           <li>They are always added inside the opening tag, and usually come in name="value" pairs.</li>
+           <li>Attributes are always specified in the <b>start tag</b></li>
+        </ul>
+      <h3 id="attribute1-exp">The <code>a</code> attribute</h3>
+      <img src="image attribute.png" id="img-attr-img" alt="img attribute example">
+    
+       <h3 id="attribute2-exp">The <code>lang</code> attribute</h3>
+       <img src="lang attribute.png" id="lang-attr-img" alt="lang attribute example">
+    </div>
+<!-- HTML Style Section -->
+<div class="topics" id="style-topics">
+    <h2 id="style-title">HTML Styles</h2>
+    <ul id="style-ul">
+      <li>Styles in HTML are used to style the font size, text color, background color, border, element spacing, etc.</li>
+      <li>Ways to use stylesheets:</li>
+      <li>1. Inline CSS</li>
+      <li>2. Internal CSS</li>
+      <li>3. External CSS</li>
+      <li>These Inline CSS styles are used to style the element directly in the tag.</li>
+    </ul>
+  
+    <h3 id="inline-example">Example for Inline CSS</h3>
+    <img src="inline css.png" id="inline-css-img" alt="Inline CSS Example">
+    <li>You use the style attribute directly in an HTML element.</li>
+  
+    <h3 id="internal-css">Example for Internal CSS</h3>
+    <img src="internal css.png" id="internal-css-img" alt="Internal CSS Example">
+    <li>You define your styles in a style tag into the same program in the header section.</li>
+  
+    <h3 id="external-css">Example for External CSS</h3>
+    <img src="external css.png" id="external-css-img" alt="External CSS Example">
+    <li>You create a another CSS file and link it with <link> in the <head>.</li>
+  </div>
+  
+<!-- HTML Layout section -->
+<div class="topics" id="layout-topics">
+  <h2 id="layout-title">HTML Layouts</h2>
+  <ul id="layout-ul">
+    <li>HTML layouts refer to the way content is arranged or structured on a web page using HTML (HyperText Markup Language). A good layout helps present information clearly and makes the website look organized and <b>user-friendly.</b></li>
+    <li> <b>header</b> - Defines a header for a document or a section.</li>
+    <li><b>nav</b> - Defines a set of navigation links.</li>
+    <li><b>section</b> - Defines a section in a document.</li>
+    <li><b>article</b> - Defines independent, self-contained content.</li>
+    <li><b>aside</b> - Defines content aside from the content (like a sidebar).</li>
+    <li><b>footer</b> - Defines a footer for a document or a section.</li>
+  </ul>
+  <h3 id="layout-exp">Example</h3>
+  <img src="layout example.png" id="layout-img" alt="HTML Layout Example">
+</div>
+
+  </div>
+  <script>
+
+  // Introduction Section
+  const title = document.getElementById('intro-title');
+  const ul = document.getElementById('intro-ul');
+  const h3 = document.getElementById('exp');
+  const img = document.getElementById('structure');
+  const box = document.getElementById('topics-box');
+
+  title.addEventListener('click', () => {
+    box.classList.toggle('expanded');
+    ul.classList.toggle('show');
+    h3.classList.toggle('show');
+    img.classList.toggle('show');
+  });
+
+  // HTML Elements Section
+  const elementTitle = document.getElementById('element-title');
+  const elementUl = document.getElementById('element-ul');
+  const elementH3 = document.getElementById('element-exp');
+  const elementImg = document.getElementById('element-img');
+  const elementBox = document.getElementById('element-topics');
+
+  elementTitle.addEventListener('click', () => {
+    elementBox.classList.toggle('expanded');
+    elementUl.classList.toggle('show');
+    elementH3.classList.toggle('show');
+    elementImg.classList.toggle('show');
+  });
+
+ // HTML Attributes Section
+const attrTitle = document.getElementById('attribute-title');
+const attrBox = document.getElementById('attribute-topics');
+const attrUl = document.getElementById('attribute-ul');
+const attrH3_1 = document.getElementById('attribute1-exp');
+const attrImg_1 = document.getElementById('img-attr-img');
+const attrH3_2 = document.getElementById('attribute2-exp');
+const attrImg_2 = document.getElementById('lang-attr-img');
+
+attrTitle.addEventListener('click', () => {
+  attrBox.classList.toggle('expanded');
+  attrUl.classList.toggle('show');
+  attrH3_1.classList.toggle('show');
+  attrImg_1.classList.toggle('show');
+  attrH3_2.classList.toggle('show');
+  attrImg_2.classList.toggle('show');
+});
+
+// HTML Styles Section
+const styleTitle = document.getElementById('style-title');
+const styleBox = document.getElementById('style-topics');
+const styleUl = document.getElementById('style-ul');
+const styleH3_1 = document.getElementById('inline-example');
+const styleImg_1 = document.getElementById('inline-css-img');
+const styleH3_2 = document.getElementById('internal-css');
+const styleImg_2 = document.getElementById('internal-css-img');
+const styleH3_3 = document.getElementById('external-css');
+const styleImg_3 = document.getElementById('external-css-img');
+
+styleTitle.addEventListener('click', () => {
+  styleBox.classList.toggle('expanded');
+  styleUl.classList.toggle('show');
+  styleH3_1.classList.toggle('show');
+  styleImg_1.classList.toggle('show');
+  styleH3_2.classList.toggle('show');
+  styleImg_2.classList.toggle('show');
+  styleH3_3.classList.toggle('show');
+  styleImg_3.classList.toggle('show');
+});
+
+// HTML Layout Section
+const layoutTitle = document.getElementById('layout-title');
+const layoutBox = document.getElementById('layout-topics');
+const layoutUl = document.getElementById('layout-ul');
+const layoutH3 = document.getElementById('layout-exp');
+const layoutImg = document.getElementById('layout-img');
+
+layoutTitle.addEventListener('click', () => {
+  layoutBox.classList.toggle('expanded');
+  layoutUl.classList.toggle('show');
+  layoutH3.classList.toggle('show');
+  layoutImg.classList.toggle('show');
+});
+
+</script>
+
+ 
+</body>
+</html>

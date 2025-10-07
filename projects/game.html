@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>GUESS GAME</title>
+        <link rel="stylesheet" href="game.css">
+    </head>
+    <body>
+        <h1>GUESS GAME</h1>
+        <br>
+        <div class="one">
+            <input id="guessnumber" placeholder="enter a number">
+        </div>
+        <div class="btn">
+            <button onclick="check()">check</button>
+        </div>
+        <p id="result">result</p>
+        <p id="score">score : 10</p>
+
+        <script>
+
+            var Guessnumber = document.getElementById("guessnumber")
+            var result = document.getElementById("result")
+            var randomNumber = Math.floor(Math.random()*10)+1
+            var score = document.getElementById("score")
+            var totalscore = 10
+            function check()
+            {
+                var enterednumber = Guessnumber.value
+                if(enterednumber == randomNumber)
+            {
+              result.textContent = "Congrats! you are right"
+               alert("you won the game")
+            }
+            else{
+                result.textContent = "Try again! you are wrong"
+                totalscore = totalscore-1
+                score.textContent = "score :" +totalscore
+                if(totalscore<1)
+            {
+                alert("GAME OVER.....Try later")
+            }
+            }
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    text-align: center;
+    color: #333;
+    padding: 20px;
+}
+
+.title-container {
+    margin-top: 50px;
+}
+
+.title-container h1 {
+    font-size: 42px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.title-container h2 {
+    font-size: 36px;
+    color: #444;
+    margin-top: 10px;
+}
+
+.nav-container {
+    margin-top: 30px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    background: rgba(255, 255, 255, 0.2);
+    display: block;
+}
+
+nav ul li a:hover {
+    background: white;
+    color: #ff6f61;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+}
+
+.search-container {
+    margin-left: 8%;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+input {
+    width: 100%;
+    max-width: 400px;
+    padding: 12px;
+    border-radius: 20px;
+    border: 2px solid #ff6f61;
+    outline: none;
+    text-align: center;
+    font-size: 16px;
+}
+
+.search-btn {
+    padding: 12px 20px;
+    border: none;
+    background-color: #ff6f61;
+    color: white;
+    font-size: 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.search-btn:hover {
+    background-color: white;
+    color: #ff6f61;
+    border: 2px solid #ff6f61;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .title-container h1 {
+        font-size: 32px;
+    }
+    .title-container h2 {
+        font-size: 28px;
+    }
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul li {
+        margin: 5px;
+    }
+    input {
+        width: 80%;
+    }
+    .search-btn {
+        width: 50%;
+    }
+}
+.show {
+    animation-name: box;
+    animation-duration: 1s; 
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    border-color: rgb(15, 245, 15);
+}
+
+@keyframes box {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

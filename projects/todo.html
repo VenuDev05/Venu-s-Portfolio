@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO-DO List</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        
+h1{
+    margin-top: 5%;
+    margin-left: 45%;
+}
+.section1{
+    display: flex;
+    padding: 30px;
+    text-align: center;
+   height: 30px;
+   width: 250px;
+   background-color: whitesmoke;
+   margin-left: 39%;
+   margin-top: 3%;
+   border-color: black;
+   border-style: solid;
+   border-radius: 20px;
+}
+.section1:hover{
+    box-shadow: 0px 0px 10px aqua;
+    transform: scale(1.05);
+    transition: 0.5s ease-in-out;
+}
+
+.section1 button{
+    margin-left: 5%;
+}
+.section2{
+    padding: 30px;
+    text-align: center;
+    display: flex;
+    width: 250px;
+   background-color: gray;
+   margin-left: 39%;
+   margin-top: 3%;
+}
+#inner-del{
+   position: relative;
+   left: 15%;
+   border-radius: 5px;
+   border-color: none;
+}
+body{
+    background-image: linear-gradient(to right,white,grey);
+}
+    </style>
+</head>
+<body>
+    <h1>TO-DO List</h1>
+    <div class="section1">
+        <input type="text" id="input">
+        <button id="add-item">Add</button>
+    </div>
+    <div class="section2">
+        <ul id="ul">
+
+        </ul>
+    </div>
+
+    <script>
+        const input = document.querySelector('#input')
+        const add = document.querySelector('#add-item')
+        const ul = document.querySelector('#ul')
+
+        add.addEventListener('click', ()=>{
+            const list = document.createElement('li')
+            list.innerHTML = input.value + "<button id='inner-del'>Delete</button>"
+            ul.append(list)
+        })
+        ul.addEventListener('click', (event)=>{
+            if(event.target.tagName = "BUTTON")
+            event.target.parentElement.remove()
+        })
+
+    </script>
+</body>
+</html>

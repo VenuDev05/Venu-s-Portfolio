@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JavaScript Book</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #e0f7fa, #e1f5fe);
+      color: #333;
+    }
+
+    h1 {
+      color: #0af50a;
+      text-align: center;
+      margin: 30px 0;
+      cursor: pointer;
+      transition: transform 0.3s ease, color 0.3s ease;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    }
+
+    h1:hover {
+      transform: scale(1.05);
+      color: #0fdc0f;
+    }
+
+    .container {
+      max-width: 950px;
+      margin: 30px auto;
+      padding: 20px 30px;
+      background-color: #ffffff;
+      border-radius: 20px;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+      transition: all 0.5s ease-in-out;
+    }
+
+    h2 {
+      margin-top: 5px;
+      color: #007f5f;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+
+
+    h2:hover {
+      color: #009d78;
+    }
+
+    ul, .extra-content {
+      opacity: 0;
+      max-height: 0;
+      overflow: hidden;
+      transition: all 0.8s ease;
+      transform: translateY(20px);
+    }
+
+    .show {
+      opacity: 1;
+      max-height: 1500px;
+      transform: translateY(0);
+    }
+
+    ul li, .extra-content li {
+      margin: 10px 0;
+      line-height: 1.7;
+      padding-left: 20px;
+    }
+
+    .extra-content {
+      padding: 10px 0 20px 10px;
+    }
+
+    .extra-content img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin: 15px 0;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    h3, h4 {
+      color: #333;
+      margin: 15px 0 10px;
+    }
+
+    @keyframes fadeInSlide {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate {
+      animation: fadeInSlide 1s ease forwards;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="main-title">JAVASCRIPT BOOK</h1>
+
+  <div class="container" id="main-content">
+    <div class="js-intro">
+      <h2 id="intro-title">INTRODUCTION</h2>
+      <ul id="intro-ul">
+        <h3><b>What is JavaScript?</b></h3>
+        <li>JavaScript is a programming language that lets you make web pages interactive. It's one of the core technologies of the web, along with HTML and CSS.</li>
+        <li>It can calculate, manipulate and validate data.</li>
+        <h3>Why JavaScript is needed?</h3>
+        <li>JavaScript is one of the 3 languages all web developers must learn:</li>
+        <li><b>1.</b> HTML to define the content of web pages.</li>
+        <li><b>2.</b> CSS to specify the layout of web pages.</li>
+        <li><b>3.</b> JavaScript to program the behavior of web pages.</li>
+      </ul>
+      <div class="extra-content" id="intro-extra">
+        <h3>JavaScript Can Change HTML Content</h3>
+        <li>One of many JavaScript HTML methods is <code>getElementById()</code>.</li>
+        <h4>Example</h4>
+        <img src="image/intro example for id.png" alt="JavaScript getElementById Example">
+      </div>
+    </div>
+
+    <div class="js-declaration">
+      <h2 id="declaration-title">JAVASCRIPT DECLARATIONS</h2>
+      <ul id="declaration-ul">
+        <h3><b>How to declare?</b></h3>
+        <li>In JavaScript, you can declare variables in the below three ways:</li>
+        <li><b>1.</b> <code>var variableName</code> - old way, function scoped.</li>
+        <li><b>2.</b> <code>let variableName</code> - modern way, block scoped.</li>
+        <li><b>3.</b> <code>const variableName</code> - constant, block scoped.</li>
+      </ul>
+      <div class="extra-content" id="declaration-extra">
+        <h4>By <code>var</code></h4>
+        <img src="image/var ex.png" alt="var example">
+        <li>They can be re-declared.</li>
+        <li>They do not have a fixed value.</li>
+
+        <h4>By <code>const</code></h4>
+        <img src="image/const ex.png" alt="const example">
+        <li>They are fixed values.</li>
+        <li>Cannot be updated or re-declared.</li>
+
+        <h4>By <code>let</code></h4>
+        <img src="image/let ex.png" alt="let example">
+        <li>Can be updated, but not re-declared in the same scope.</li>
+        <li>Has block scope (like inside { ... })</li>
+        <li>Preferred when the value will change.</li>
+      </div>
+    </div>
+    <div class="js-dom">
+        <h2 id="dom-title">JAVASCRIPT DOM</h2>
+        <ul id="dom-ul">
+            <h3><b>what is DOM?</b></h3>
+            <br>
+            <li>DOM stands for Document Object Model.</li>
+            <li>It’s basically the structure of your webpage that JavaScript can read and change.</li>
+            <h3>The Tree model of DOM</h3>
+            <img src="image/dom tree.png">
+            <h5>With the object model, JavaScript gets all the power it needs to create dynamic HTML:</h5>
+            <li>JavaScript can change all the HTML elements in the page.</li>
+            <li>JavaScript can change all the HTML attributes in the page.</li>
+            <li>JavaScript can change all the CSS styles in the page.</li>
+            <li>JavaScript can remove existing HTML elements and attributes.</li>
+            <li>JavaScript can add new HTML elements and attributes.</li>
+            <li>JavaScript can react to all existing HTML events in the page.</li>
+            <li>JavaScript can create new HTML events in the page.</li>
+        </ul>
+    </div>
+    <br>
+    <div class="js-api">
+      <h2 id="api-title">WEB API</h2>
+      <ul id="api-ul">
+        <h4>What is Web API?</h4>
+        <li>API stands for <b>A</b>pplication <b>P</b>rogramming <b>I</b>nterface.</li>
+        <li>A Web API is an application programming interface for the Web.</li>
+        <li>A Browser API can extend the functionality of a web browser.</li>
+      </ul>
+    </div>
+    <div class="extra-content" id="api-extra">
+      <h3>Example</h3>
+      <img src="image/api ex.png">
+    </div>
+    <div class="js-json">
+      <h2 id="json-title">JSON - INTRODUCTION</h2>
+      <ul id="json-ul">
+        <h3>What is JSON?</h3>
+        <li>JSON stands for <b>J</b>avaScript <b>O</b>bject <b>N</b>otation</li>
+        <li>JSON is a text format for storing and transporting data.</li>
+        <li>JSON is "self-describing" and easy to understand.</li>
+        <li>JSON is used to send data between computers.</li>
+      </ul>
+    </div>
+    <div class="extra-content" id="json-extra">
+      <h3>JSON Example</h3>
+      <img src="image/json example1.png">
+      <br><br>
+      <li>If you parse the JSON string with a JavaScript program, you can access the data as an object:</li>
+      <img src="image/json get.png">
+    </div>
+  </div>
+
+  <script>
+    // INTRODUCTION Section
+    const introHeader = document.querySelector('#intro-title');
+    const introUl = document.querySelector('#intro-ul');
+    const introExtra = document.querySelector('#intro-extra');
+
+    introHeader.addEventListener('click', () => {
+      introUl.classList.toggle('show');
+      introExtra.classList.toggle('show');
+    });
+
+    // DECLARATION Section
+    const declareHeader = document.querySelector('#declaration-title');
+    const declareUl = document.querySelector('#declaration-ul');
+    const declareExtra = document.querySelector('#declaration-extra');
+
+    declareHeader.addEventListener('click', () => {
+      declareUl.classList.toggle('show');
+      declareExtra.classList.toggle('show');
+    });
+
+    // Animate container on title click
+    const mainTitle = document.querySelector('#main-title');
+    const mainContent = document.querySelector('#main-content');
+
+    mainTitle.addEventListener('click', () => {
+      mainContent.classList.toggle('animate');
+    });
+
+    // DOM Section
+    const domHeader = document.querySelector('#dom-title')
+    const domUl = document.querySelector('#dom-ul')
+
+
+    domHeader.addEventListener('click', () => {
+        domUl.classList.toggle('show')
+    })
+
+    // API Section
+    const apiHeader = document.querySelector('#api-title')
+    const apiUl = document.querySelector('#api-ul')
+    const apiExtra = document.querySelector('#api-extra')
+
+    apiHeader.addEventListener('click', ()=>{
+      apiUl.classList.toggle('show')
+      apiExtra.classList.toggle('show')
+    })
+
+    // JSON Section
+    const jsonHeader = document.querySelector('#json-title')
+    const jsonUl = document.querySelector('#json-ul')
+    const jsonExtra = document.querySelector('#json-extra')
+
+    jsonHeader.addEventListener('click',()=>{
+      jsonUl.classList.toggle('show')
+      jsonExtra.classList.toggle('show')
+    })
+  </script>
+</body>
+</html>
